@@ -7,7 +7,7 @@ phases:
       - aws --version
     # - REPOSITORY_URI=<>ACCOUNT-ID>.dkr.ecr.<REGION>.amazonaws.com/<APPLICATION-REPO-NAME> 
     #   - REPOSITORY_URI=126279675365.dkr.ecr.ap-southeast-1.amazonaws.com/my-webapp-repo
-      - REPOSITORY_URI=033412442043.dkr.ecr.us-east-1.amazonaws.com/user22
+      - REPOSITORY_URI=033412442043.dkr.ecr.us-east-1.amazonaws.com/user7
       - echo $AWS_DEFAULT_REGION
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
